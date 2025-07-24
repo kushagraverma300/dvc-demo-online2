@@ -4,8 +4,8 @@ import os
 
 df = pd.read_csv("https://raw.githubusercontent.com/araJ2/customer-database/master/Ecommerce%20Customers.csv")
 
-df.iloc[:,3:]
+df = df.iloc[:, 3:]
 
-dff = df[df["Length of Membership"] > 3]
+df = df[df["Length of Membership"] > 3]
 
 df.to_csv("data/customer.csv", index=False)
